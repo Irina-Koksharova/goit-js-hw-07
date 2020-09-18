@@ -21,9 +21,12 @@ const imagesGalleryEl = document.querySelector('#gallery');
 const makeImagesGallery = images => {
   return images.map(image => {
     const itemEl = document.createElement('li');
+    itemEl.classList = 'item-gallery';
     const imageEl = document.createElement('img');
+    imageEl.classList = 'image-gallery';
     imageEl.src = image.url;
     imageEl.alt = image.alt;
+
     itemEl.appendChild(imageEl);
     return itemEl;
   });

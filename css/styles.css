@@ -1,0 +1,54 @@
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto 0 auto;
+  padding: 30px;
+}
+
+.container-flex {
+  display: flex;
+  justify-content: space-around;
+}
+
+.item-task {
+  margin-bottom: 20px;
+  list-style-type: none;
+}
+
+.item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+#gallery {
+  display: flex;
+  padding: 0;
+}
+
+.item-gallery {
+  width: 360px;
+  height: 250px;
+  list-style-type: none;
+}
+
+.item-gallery:not(:last-child) {
+  margin-right: 30px;
+}
+
+.image-gallery {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#value {
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+}
