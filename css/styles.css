@@ -53,6 +53,8 @@ h3 {
   text-align: center;
 }
 
+/* Для задачи № 6 */
+
 #validation-input {
   border: 3px solid #bdbdbd;
 }
@@ -63,4 +65,10 @@ h3 {
 
 #validation-input.invalid {
   border-color: #f44336;
+}
+
+/* Для задачи № 7 */
+
+#text {
+  display: inline-block;
 }
