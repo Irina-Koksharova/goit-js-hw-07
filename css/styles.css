@@ -25,6 +25,8 @@ h3 {
   margin-bottom: 20px;
 }
 
+/* Для задания № 3 */
+
 #gallery {
   display: flex;
   padding: 0;
@@ -47,13 +49,23 @@ h3 {
   object-fit: cover;
 }
 
+/* Для задания № 4 */
+
 #value {
   display: inline-block;
   width: 30px;
   text-align: center;
 }
 
-/* Для задачи № 6 */
+/* Для задания № 5 */
+
+.text {
+  margin: 10px 0px 0px 0px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* Для задания № 6 */
 
 #validation-input {
   border: 3px solid #bdbdbd;
@@ -67,8 +79,9 @@ h3 {
   border-color: #f44336;
 }
 
-/* Для задачи № 7 */
+/* Для задания № 7 */
 
 #text {
   display: inline-block;
+  min-height: 50px;
 }

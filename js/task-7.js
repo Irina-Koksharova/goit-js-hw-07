@@ -2,18 +2,16 @@ const inputEl = document.querySelector('#font-size-control');
 const textEl = document.querySelector('#text');
 textEl.style.fontSize = '30px';
 
-const inputDefaultValue = Number(inputEl.value);
-const textDefaultValue = Number.parseInt(
-  document.getElementById('text').style.fontSize,
-);
+const inputDefaultValue = inputEl.value;
+const textFontSizeDefaultValue = Number.parseInt(textEl.style.fontSize);
 
 function onInputChange(event) {
   let value;
-  let newTextFontSize;
-  if (Number(event.currentTarget.value) !== inputDefaultValue) {
-    value = (Number(event.currentTarget.value) - inputDefaultValue) / 3;
-    newTextFontSize = textDefaultValue + value + 'px';
-    textEl.style.fontSize = newTextFontSize;
+  let newTextFontSizeValue;
+  if (event.currentTarget.value !== inputDefaultValue) {
+    value = (event.currentTarget.value - inputDefaultValue) / 3;
+    newTextFontSizeValue = textFontSizeDefaultValue + value + 'px';
+    textEl.style.fontSize = newTextFontSizeValue;
   }
 }
 
