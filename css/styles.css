@@ -94,18 +94,13 @@ h3 {
 
 #boxes {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .boxes-item {
-  width: 30px;
-  height: 30px;
-  background-color: #4caf50;
+  margin-bottom: 10px;
 }
 
 .boxes-item:not(:last-child) {
   margin-right: 10px;
 }
-
-/* .boxes-item:nth-child(n + 1) {
-  background-color: orange;
-} */

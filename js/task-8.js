@@ -4,34 +4,59 @@ const renderEl = formEl.children[1];
 const destroyEl = formEl.children[2];
 const collectionEl = document.querySelector('#boxes');
 
+function randomNumber(max, min) {
+  const random = Math.random() * (max - min) + min;
+  const number = Math.round(random).toString();
+  return number;
+}
+
+function dinamicWidth(element, value) {
+  return (width += value);
+}
+
+function dinamicHeight(element, value) {
+  return (height += value);
+}
+
+let width = 20;
+let height = 20;
 let boxes;
 
-function onFormInput(event) {
+function onFormElInput(amount) {
   let array = [];
-  array.length = event.currentTarget.value;
+  array.length = amount.currentTarget.value;
+
   const makeBoxes = items => {
     return [...items].map(item => {
       const itemEl = document.createElement('div');
+
       itemEl.classList = 'boxes-item';
-      itemEl.style =
-        'background-color: ' +
-        '#' +
-        (Math.random().toString(16) + '000000').substring(2, 8).toUpperCase();
+      itemEl.style.backgroundColor = `rgb(${randomNumber(
+        255,
+        0,
+      )}, ${randomNumber(255, 0)}, ${randomNumber(255, 0)})`;
+      itemEl.style.width = `${dinamicWidth(item, 10)}px`;
+      itemEl.style.height = `${dinamicHeight(item, 10)}px`;
+
       return itemEl;
     });
   };
-  boxes = makeBoxes(array);
-  return boxes;
+
+  return (boxes = makeBoxes(array));
 }
-inputEl.addEventListener('input', onFormInput);
+
+inputEl.addEventListener('input', onFormElInput);
 
 function createBoxes(event) {
   collectionEl.append(...boxes);
 }
+
 renderEl.addEventListener('click', createBoxes);
 
 function destroyBoxes(event) {
   inputEl.value = '';
   collectionEl.remove(...boxes);
+  document.location.reload();
 }
+
 destroyEl.addEventListener('click', destroyBoxes);
