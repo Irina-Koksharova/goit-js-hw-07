@@ -20,15 +20,15 @@ const imagesGalleryEl = document.querySelector('#gallery');
 
 const makeImagesGallery = images => {
   return images.map(image => {
-    const itemEl = document.createElement('li');
-    itemEl.classList = 'item-gallery';
-    const imageEl = document.createElement('img');
-    imageEl.classList = 'image-gallery';
-    imageEl.src = image.url;
-    imageEl.alt = image.alt;
+    const itemElement = document.createElement('li');
+    itemElement.classList = 'item-gallery';
+    const imageElement = document.createElement('img');
+    imageElement.classList = 'image-gallery';
+    imageElement.src = image.url;
+    imageElement.alt = image.alt;
 
-    itemEl.appendChild(imageEl);
-    return itemEl;
+    itemElement.appendChild(imageElement);
+    return itemElement;
   });
 };
 const itemsGallery = makeImagesGallery(images);
