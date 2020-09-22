@@ -10,12 +10,12 @@ let counterValue = Number(counterEl.textContent);
 
 function onBtnDecrementClick(event) {
   counterValue -= 1;
-  return (counterEl.textContent = counterValue);
+  counterEl.textContent = counterValue;
 }
 
 function onBtnIncrementClick(event) {
   counterValue += 1;
-  return (counterEl.textContent = counterValue);
+  counterEl.textContent = counterValue;
 }
 
 buttonDecrementEl.addEventListener('click', onBtnDecrementClick);
