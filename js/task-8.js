@@ -6,27 +6,27 @@ const refs = {
   collectionEl: document.querySelector('#boxes'),
 };
 
-let boxes;
-let width = 20;
-let height = 20;
-
 function makeRandomNumber(max, min) {
   const random = Math.random() * (max - min) + min;
   const number = Math.round(random).toString();
   return number;
 }
 
-function makeDinamicWidth(value) {
-  width += value;
-  return width;
-}
-
-function makeDinamicHeight(value) {
-  height += value;
-  return height;
-}
-
 function createBoxes(event) {
+  let boxes;
+  let width = 20;
+  let height = 20;
+
+  function makeDinamicWidth(value) {
+    width += value;
+    return width;
+  }
+
+  function makeDinamicHeight(value) {
+    height += value;
+    return height;
+  }
+
   const makeBoxes = value => {
     let array = [];
     for (let i = 0; i < value; i += 1) {
@@ -52,8 +52,6 @@ refs.renderEl.addEventListener('click', createBoxes);
 function destroyBoxes(event) {
   refs.collectionEl.innerHTML = '';
   refs.inputEl.value = '';
-  width = 20;
-  height = 20;
 }
 
 refs.destroyEl.addEventListener('click', destroyBoxes);
